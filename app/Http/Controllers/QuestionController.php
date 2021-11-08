@@ -90,9 +90,27 @@ class QuestionController extends Controller
      * @param  \App\Question  $question
      * @return \Illuminate\Http\Response
      */
-    public function edit(Question $question)
+    public function edit(Question $question, Request $request)
     {
         //
+
+        $data['title'] = "";
+        $data['courses'] = \App\Course::where('company_id','=', auth()->user()->company_id)->get();
+        $data['questions'] = [];
+
+        // return $question;
+
+        // return $question->course_id;
+
+        $request->merge([
+    'course' => $question->course_id,
+]);
+
+        // \Request::merge('course') = $question->course_id;
+        if(\Request::get('course') != null) {
+            $data['questions'] = \App\Course::find(\Request::get('course'))->questions()->paginate(12);
+        } 
+        return view("manager.questions.edit")->with($data);
     }
 
     /**
@@ -105,6 +123,38 @@ class QuestionController extends Controller
     public function update(Request $request, Question $question)
     {
         //
+
+
+        $this->validate($request,
+            [
+            'question' => 'required',
+            'answers' => 'required',
+            'corrects' => 'required',
+        ]);
+
+
+        // $question = new \App\Question();
+        $question->name = $request->input('question');
+        $question->course_id = $request->input('course');
+        $question->company_id = auth()->user()->company_id;
+        $question->save();
+
+        // delete all current answers linked to question anf get ready to add new answers
+        $question->answers()->delete();
+
+        for($i=0; $i<4; $i++) {
+            $answer = new \App\Answer();
+            $answer->name = $request->input('answers')[$i];
+            $answer->correct = $request->input('corrects')[$i];
+            $answer->question_id = $question->id;
+            $answer->course_id = $request->input('course');
+            $answer->company_id = auth()->user()->company_id;
+            $answer->save();
+        }
+
+        // return $request->all();
+
+        return redirect()->back()->with('s', 'Question and answers updated');
     }
 
     /**

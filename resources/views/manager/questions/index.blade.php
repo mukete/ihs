@@ -220,10 +220,10 @@
                               </a>
 
                               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <!-- <a class="dropdown-item " href="{{url('manager/questions/'.$question->id.'/edit')}}">
+                                <a class="dropdown-item " href="{{url('manager/questions/'.$question->id.'/edit')}}">
                                   <span class="material-icons">edit</span>
                                 </a>
-                                <br/>
+                                <!-- <br/>
                                 <a class="dropdown-item " href="#">
                                   <span class="material-icons">visibility</span>
                                 </a> -->
