@@ -168,7 +168,7 @@
                         <div class="form-group row">
                             <label for="documents" class="col-md-2 col-form-label text-md-right">Document content</label>
 
-                            <div class="col-md-4">
+                            <div class="col-md-8">
                                 <input id="documents" type="file" class="form-control @error('documents') is-invalid @enderror" name="documents[]"  multiple>
 
                                 @error('documents')
@@ -176,14 +176,26 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
-                            <div class="col-md-4">
-                                @foreach($course->contents()->where('type','=','documents')->get() as $content)
-                                <a href="{{url('delete-content/'.$content->id)}}">
-                                  {{$content->file}} - <span class="badge badge-danger">x</span> <br/>
-                                </a>
+
+                                <table class="table table-bordered table-hover table-sm">
+                                    @foreach($course->contents()->where('type','=','documents')->get() as $content)
+                                    <tr>
+                                        <td>
+                                           {{$content->file}} 
+                                        </td>
+                                        <td>
+                                           <a href="{{url('delete-content/'.$content->id)}}">
+                                  <span class="badge badge-danger">x</span> <br/>
+                                </a> 
+                                        </td>
+                                    </tr>
+                                
                                 @endforeach
+                                </table>
+
+                                
                             </div>
+                            
                         </div>
 
                         
