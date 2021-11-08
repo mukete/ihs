@@ -42,7 +42,7 @@
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
-    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="-moz-transition: none;
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top " style="-moz-transition: none;
     -ms-transition: none;
     -moz-box-shadow: none; box-shadow: none;" >
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center" style="background: #10425E; width: 300px; border: solid 2px #10425E;">
@@ -62,7 +62,7 @@
           <span class="ti-view-list"></span>
         </button> -->
         
-        <ul class="navbar-nav navbar-nav-right">
+        <ul class="navbar-nav navbar-nav-right ">
 
           <li class="nav-item dropdown">
             <a href="{{url('/')}}">  User</a>
