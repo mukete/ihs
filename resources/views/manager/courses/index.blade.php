@@ -54,11 +54,12 @@
                           <td>{{$course->name}}</td>
                           <td>
                             
+                            {{$course->contents->count()}}
                             @foreach($course->contents as $content)
-                            <a href="">
+                            <!-- <a href="">
                               {{$content->type}} - {{$content->file}} <br/>
                             </a>
-                            @endforeach
+                            @endforeach -->
                           </td>
                           <td>
 
