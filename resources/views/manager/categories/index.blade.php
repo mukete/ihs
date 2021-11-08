@@ -69,10 +69,7 @@
                                   <span class="material-icons">edit</span>
                                 </a>
                                 <br/>
-                                <a class="dropdown-item " href="#">
-                                  <span class="material-icons">visibility</span>
-                                </a>
-                                <br/>
+                                
                                 <a class="dropdown-item "  href="#">
                                   <span class="material-icons">delete_outline</span>
                                 </a>
