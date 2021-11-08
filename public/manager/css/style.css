@@ -20881,7 +20881,7 @@ dl li {
 .navbar .navbar-brand-wrapper .navbar-brand img {
   /*width: calc(237px - 130px);*/
   /*max-width: 100%;*/
-  height: 100px;
+  /*height: 100px;*/
   width: 100px;
   margin: auto;
   margin-top : 2.5rem;
@@ -21369,3 +21369,8 @@ dl li {
 }
 
 /*# sourceMappingURL=maps/style.css.map */
+
+
+.img-logo {
+  
+}

@@ -36,6 +36,15 @@
     padding-bottom: 4.0rem;
 }
 
+.img-logo {
+  padding: 0.5rem;
+  margin: 1.0rem;
+}
+
+.menu {
+    padding-top: 5.0rem;
+}
+
 .menu-list a {
     border-radius: 0;
     color: #ffffff;
@@ -164,9 +173,9 @@
         <!-- <span><b></b> ihs</span> -->
         <span>
           @if(auth()->user()->company->logo != null)
-          <img src="{{url('content/logos/'.auth()->user()->company->logo)}}" width="60%">
+          <img class="img-logo" src="{{url('content/logos/'.auth()->user()->company->logo)}}" width="60%">
           @else
-          <img src="{{url('ihs.png')}}" width="60%">
+          <img class="img-logo" src="{{url('ihs.png')}}" width="60%">
           @endif
         </span>
       </div>
