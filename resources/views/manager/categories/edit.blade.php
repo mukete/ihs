@@ -34,7 +34,7 @@
                             <label for="name" class="col-md-2 col-form-label text-md-right">{{trans('manager.category_name')}}</label>
 
                             <div class="col-md-8">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" >
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name')!=null ? old('name') : $category->name }}" >
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
