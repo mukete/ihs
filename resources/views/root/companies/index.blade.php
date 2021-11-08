@@ -41,9 +41,7 @@
                           <th>
                             users
                           </th>
-                          <th>
-                            settings
-                          </th>
+                          
                         </tr>
                       </thead>
                       <tbody>
@@ -63,7 +61,7 @@
                           {{$company->users->count()}}
                           </td>
 
-                          <td>
+                          <!-- <td>
                             <div class="dropdown">
                               <a class="btn btn-sm btn-link !dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="material-icons">more_horiz</span>
@@ -79,7 +77,7 @@
                                 </a>
                               </div>
                             </div>
-                          </td>
+                          </td> -->
                           
                         </tr>
                         @endforeach
