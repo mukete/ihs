@@ -1,0 +1,96 @@
+.material-icons, .material-icons-outlined {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.sidebar {
+	background: #10425E;
+	width: 300px;
+	padding-left: 0.5rem;
+        border-top: 10px solid #10425E;
+}
+
+
+
+/*@media screen and (max-width: 991px)
+.sidebar-offcanvas {
+    position: fixed;
+    max-height: calc(100vh - 700px);
+    top: 70px;
+    bottom: 0;
+    overflow: auto;
+    right: -300px;
+    -webkit-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}*/
+
+
+.sidebar .nav .nav-item .nav-link {
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	color: #ffffff;
+
+}
+
+.sidebar .nav .nav-item .nav-link :hover {
+	/*padding: 0.5rem 0.5rem 0.5rem 0.5rem;*/
+	color: red;
+
+}
+
+.sidebar .nav .nav-item.active > .nav-link, .sidebar .nav .nav-item.active > .nav-link{
+    position: relative;
+    color: #ffffff;
+    background: #5B6E80;
+    border-radius: 0.4rem;
+}
+
+.sidebar .nav .nav-item.active > .nav-link i, .sidebar .nav .nav-item.active > .nav-link .menu-title, .sidebar .nav .nav-item.active > .nav-link .menu-arrow {
+    color: #ffffff;
+}
+
+
+
+.main-panel {
+    transition: width 0.25s ease, margin 0.25s ease;
+    width: calc(100% - 300px);
+    min-height: calc(100vh - 70px);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+.sidebar .nav {
+	position: fixed;
+	width: 270px;
+}
+
+.sidebar .nav .nav-item .nav-link .menu-title {
+    color: inherit;
+    display: inline-block;
+    font-size: 0.875rem;
+    line-height: 1;
+    vertical-align: middle;
+    margin-top: 2px;
+}
+
