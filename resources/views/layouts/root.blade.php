@@ -66,6 +66,9 @@
         
         <ul class="navbar-nav navbar-nav-right">
 
+          <li class="nav-item dropdown">
+            <a href="{{ url('manager/start') }}">Manager</a>
+          </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
